@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  width: 1080px;
+  margin: 0 auto;
+}
+nav {
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  font-family: "Karla", sans-serif;
+}
+nav .wrapper {
+  display: flex;
+  height: 100px;
+  width: 980px;
+  margin: 0 auto;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+}
+nav .wrapper .title {
+  display: flex;
+  align-items: center;
+}
+nav .wrapper .title h1 {
+  margin: 0 10px;
+  font-size: 24px;
+}
+nav img {
+  width: 100px;
+  padding: 0 5px;
+}
+
+/* nav styling end */
+
+.background {
+  background: rgb(235, 231, 223);
+}
+.content {
+  width: 980px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  width: 49%;
+  padding: 10px;
+  font-size: 20px;
+}
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  margin-block: 20px;
+}
+input,
+button {
+  border-radius: 10px;
+  border: 0;
+  font-family: Karla;
+}
+.meme {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
+.img-container {
+  position: relative;
+}
+.topText,
+.bottomText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 24px;
+  font-family: Karla;
+  color: white;
+}
+.topText {
+  top: 10px;
+}
+.bottomText {
+  bottom: 10px;
+}
