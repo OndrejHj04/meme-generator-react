@@ -1,10 +1,11 @@
 import React from "react";
+import data from "./data";
 
 export default function Content() {
   const [text, setText] = React.useState({
     topText: "",
     bottomText: "",
-    randomImage: "http://i.imgflip.com/1bij.jpg",
+    randomImage: "https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP",
   });
 
   function change(event) {
@@ -17,18 +18,17 @@ export default function Content() {
   const [meme, setMeme] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
-      .then((res) => res.json())
-      .then((data) => setMeme(data.data.memes));
+    setMeme(data);
   }, []);
 
   function submit(event) {
     event.preventDefault();
-    const num = Math.round(Math.random() * 100);
-    setText(() => {
+    const num = Math.floor(Math.random() * data.length);
+    console.log(num);
+
+    setText((oldVal) => {
       return {
-        topText: "",
-        bottomText: "",
+        ...oldVal,
         randomImage: meme[num].url,
       };
     });
@@ -60,6 +60,7 @@ export default function Content() {
           <p className="bottomText">{text.bottomText.toUpperCase()}</p>
           <img src={text.randomImage} className="meme" />
         </div>
+        <h1 className="description">win + shift + s and paste to murdria discord</h1>
       </div>
     </div>
   );

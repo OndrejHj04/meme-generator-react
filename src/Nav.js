@@ -6,7 +6,7 @@ export default function Nav() {
       <div className="wrapper">
         <div className="title">
           <img src="./troll.png" />
-          <h1>Meme Generator</h1>
+          <h1>Murdria Generator</h1>
         </div>
 
         <p>with 💘 by Ondřej Hájek</p>
